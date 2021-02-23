@@ -9,7 +9,7 @@ foreach ($charges as $charge) {
 echo '番号: ';
 
 $answer = trim(fgets(STDIN));
-$money = $charges[$answer - 1];
+$money = $charges[(int)$answer - 1];
 switch ($answer) {
     case 1:
     case 2:
