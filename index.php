@@ -1,15 +1,14 @@
 <?php
-$charges = [1000, 3000, 5000];
+$charges = [1 => 1000, 2 => 3000, 3 => 5000];
 
 echo "Suicaにチャージします。金額に該当する番号を入力してください。\n";
-foreach ($charges as $charge) {
-    $num += 1;
-    echo $num . ': ' . number_format($charges[$num - 1]) . "円\n";
+foreach ($charges as $num => $value) {
+    echo $num . ': ' . number_format($value) . "円\n";
 }
 echo '番号: ';
 
 $answer = trim(fgets(STDIN));
-$money = $charges[(int)$answer - 1];
+$money = $charges[$answer];
 switch ($answer) {
     case 1:
     case 2:
